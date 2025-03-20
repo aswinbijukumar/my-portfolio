@@ -1,0 +1,148 @@
+/* Navbar.css */
+
+/* Custom navbar styling */
+.navbar {
+  background-color: #ffffff; /* White background */
+ 
+  padding: 4rem 0; /* Add padding */
+}
+
+/* Navbar brand styling */
+.navbar-brand .navbar-item {
+  font-size: 1.5rem; /* Larger font size for brand */
+  font-weight: bold; /* Bold text */
+  color: #333333; /* Dark text color */
+}
+
+/* Style the "Projects" and "Say Hello" links as buttons */
+.navbar-item.button-style {
+  background-color: transparent; /* Transparent background */
+  border: 4px solid #6E07F3; /* Turquoise border */
+  color: #6E07F3; /* Turquoise text */
+  border-radius: 20px; /* Rounded corners */
+  padding: 0.75rem 1.5rem; /* Add padding */
+  margin-left: 1rem; /* Add spacing between buttons */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for buttons */
+.navbar-item.button-style:hover {
+  background-color: #6E07F3; /* Turquoise background on hover */
+  color: #ffffff; /* White text on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* Remove blue focus outline */
+.navbar-item:focus {
+  outline: none !important; /* Remove outline */
+  box-shadow: none !important; /* Remove box shadow */
+}
+
+/* Active state for navbar items */
+.navbar-item.is-active {
+  color: #6E07F3; /* Turquoise text for active item */
+}
+
+/* Hamburger menu styling */
+.navbar-burger {
+  color: #333333; /* Dark color for hamburger icon */
+}
+
+.navbar-burger:hover {
+  background-color: transparent; /* Transparent background on hover */
+  color:#6E07F3 ; /* Turquoise text on hover */
+}
+
+/* Mobile menu styling */
+.navbar-menu {
+  transition: all 0.3s ease;
+}
+/* Remove all effects on the logo */
+.navbar-item img {
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  outline: none; /* Remove focus outline */
+  border: none; /* Remove border */
+  box-shadow: none; /* Remove box shadow */
+}
+
+/* Optional: Add hover effect for the logo */
+.navbar-item img:hover {
+  opacity: 0.8; /* Slightly fade on hover */
+  transition: opacity 0.3s ease;
+}
+/* Override Bulma and browser default styles */
+.navbar-item:focus img,
+.navbar-item:active img,
+.navbar-item:hover img {
+  outline: none !important; /* Remove focus outline */
+  border: none !important; /* Remove border */
+  box-shadow: none !important; /* Remove box shadow */
+}
+.navbar-logo {
+  height: 64px; /* Adjust as needed */
+}
+/* Custom styles for the logo container */
+.navbar-logo-container {
+  display: flex;
+  align-items: center; /* Vertically center the logo */
+  margin-right: auto; /* Push the logo to the left */
+}
+
+/* Custom styles for the logo */
+.navbar-logo {
+  height: 64px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+  max-height: 100%; /* Ensure it doesn't overflow */
+}
+
+/* Ensure navbar items are not affected by the logo size */
+.navbar-menu {
+  display: flex;
+  align-items: center; /* Vertically center the navbar items */
+}
+
+/* Style the "Projects" and "Say Hello" links as buttons */
+.navbar-item.button-style {
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #6E07F3; /* Thinner turquoise border */
+  color: #6E07F3; /* Turquoise text */
+  border-radius: 8px; /* Smaller rounded corners */
+  padding: 0.5rem 1rem; /* Smaller padding */
+  margin-left: 1rem; /* Add spacing between buttons */
+  font-weight: bold; /* Bold text */
+  transition: all 0.3s ease; /* Smooth transition */
+  font-size: 0.875rem; /* Smaller font size */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Add letter spacing */
+}
+
+/* Hover effect for buttons */
+.navbar-item.button-style:hover {
+  background-color: #6E07F3; /* Turquoise background on hover */
+  color: #ffffff; /* White text on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+/* Active state for navbar items */
+.navbar-item.button-style.is-active {
+  background-color: #6E07F3; /* Turquoise background for active item */
+  color: #ffffff; /* White text for active item */
+}
+
+/* Remove blue focus outline */
+.navbar-item.button-style:focus {
+  outline: none !important; /* Remove outline */
+  box-shadow: none !important; /* Remove box shadow */
+}
+.button-style.is-rounded {
+  border-radius: 20px; /* Adjust the radius as needed */
+}
+
+.button-style.has-text-weight-bold {
+  font-weight: 700; /* Adjust the boldness as needed */
+}

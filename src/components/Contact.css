@@ -1,0 +1,44 @@
+/* Contact.css */
+
+/* Section styling */
+.contact-section {
+  padding: 4rem 0;
+  background-color: white; /* White background */
+}
+
+/* Form styling */
+.contact-section .input,
+.contact-section .textarea {
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px;
+  background-color: #f5f5f5; /* Light gray background */
+  color: #333; /* Dark text */
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-section .input:focus,
+.contact-section .textarea:focus {
+  box-shadow: 0 0 0 3px rgba(110, 7, 243, 0.3); /* Accent color box shadow */
+  border-color: rgb(110, 7, 243); /* Accent color border */
+}
+
+/* Button styling */
+.contact-section .button {
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: rgb(110, 7, 243); /* Accent color */
+  color: white; /* White text */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-section .button:hover {
+  background-color: rgba(110, 7, 243, 0.8); /* Slightly transparent on hover */
+}
+
+.contact-section .button:active {
+  transform: scale(0.95); /* Slightly scale down on click */
+}
+/* Contact.css */
+.contact-section {
+  font-family: 'Poppins', sans-serif;
+}

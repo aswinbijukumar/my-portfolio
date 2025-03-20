@@ -1,0 +1,69 @@
+/* Projects.css */
+
+/* Custom styling for the projects section */
+#projects {
+    background-color: #ffffff; /* White background */
+    padding: 4rem 0; /* Add padding */
+  }
+  
+  /* Title styling */
+  #projects .title {
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    color: #333333; /* Dark text color */
+    margin-bottom: 1rem; /* Add spacing below the title */
+  }
+  
+  /* Subtitle styling */
+  #projects .subtitle {
+    font-size: 1.25rem; /* Medium font size */
+    color: #666666; /* Slightly lighter text color */
+    margin-bottom: 2rem; /* Add spacing below the subtitle */
+  }
+  
+  /* Card styling */
+  #projects .project-card {
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  #projects .project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  /* Card image styling */
+  #projects .card-image img {
+    border-top-left-radius: 8px; /* Rounded corners for the image */
+    border-top-right-radius: 8px;
+  }
+  
+  /* Card content styling */
+  #projects .card-content {
+    padding: 1.5rem; /* Add padding */
+  }
+  
+  #projects .card-content .title {
+    font-size: 1.5rem; /* Medium font size */
+    color: #333333; /* Dark text color */
+    margin-bottom: 0.75rem; /* Add spacing below the title */
+  }
+  
+  #projects .card-content .subtitle {
+    font-size: 1rem; /* Medium font size */
+    color: #666666; /* Slightly lighter text color */
+    margin-bottom: 1.5rem; /* Add spacing below the subtitle */
+  }
+  
+  /* Button styling */
+  #projects .button.is-primary {
+    background-color: #00d1b2; /* Turquoise background */
+    color: #ffffff; /* White text */
+    border: none; /* Remove border */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  #projects .button.is-primary:hover {
+    background-color: #00947e; /* Darker turquoise on hover */
+  }

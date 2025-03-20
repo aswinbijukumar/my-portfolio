@@ -1,0 +1,12 @@
+/* Footer styling */
+.footer {
+    padding: 2rem 0;
+  }
+  
+  .social-icons a {
+    transition: opacity 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    opacity: 0.7; /* Slightly fade on hover */
+  }

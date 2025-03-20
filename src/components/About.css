@@ -1,0 +1,62 @@
+/* About.css */
+
+/* Custom styling for the about section */
+#about {
+    background-color: #ffffff; /* White background */
+    padding: 4rem 0; /* Add padding */
+  }
+  
+  /* Title styling */
+  #about .title {
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    color: #333333; /* Dark text color */
+    margin-bottom: 1rem; /* Add spacing below the title */
+  }
+  
+  /* Subtitle styling */
+  #about .subtitle {
+    font-size: 1.25rem; /* Medium font size */
+    color: #666666; /* Slightly lighter text color */
+    margin-bottom: 2rem; /* Add spacing below the subtitle */
+  }
+  
+  /* Profile photo container */
+  .profile-photo-container {
+    margin-bottom: 2rem; /* Add spacing below the photo */
+  }
+  
+  /* Profile photo styling */
+  .profile-photo {
+    width: 150px; /* Adjust the size of the photo */
+    height: 150px;
+    border-radius: 50%; /* Make the photo circular */
+    border: 4px solid #00d1b2; /* Add a turquoise border */
+    object-fit: cover; /* Ensure the photo fits within the circle */
+  }
+  
+  /* Content styling */
+  #about .content {
+    font-size: 1.1rem; /* Medium font size */
+    color: #333333; /* Dark text color */
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content */
+  }
+  
+  #about .content p {
+    margin-bottom: 1.5rem; /* Add spacing between paragraphs */
+  }
+  
+  /* Button styling */
+  #about .button.is-primary {
+    background-color: #00d1b2; /* Turquoise background */
+    color: #ffffff; /* White text */
+    border: none; /* Remove border */
+    transition: all 0.3s ease; /* Smooth transition */
+    font-size: 1.25rem; /* Larger font size */
+    padding: 1rem 2rem; /* Add padding */
+  }
+  
+  #about .button.is-primary:hover {
+    background-color: #00947e; /* Darker turquoise on hover */
+  }

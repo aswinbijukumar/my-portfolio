@@ -1,0 +1,42 @@
+/* AboutMe.css */
+
+/* Section styling */
+.about-me {
+    padding: 4rem 0;
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  
+  /* Image styling */
+  .about-me .image.is-1by1 img {
+    border-radius: 50%; /* Circular image */
+    border: 4px solid #00d1b2; /* Turquoise border */
+  }
+  
+  /* Skill box styling */
+  .skill-box {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  .skill-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  /* Icon styling */
+  .skill-box .icon {
+    margin-bottom: 1rem; /* Add spacing below the icon */
+  }
+  
+  /* Title and subtitle styling */
+  .skill-box .title {
+    color: #333333; /* Dark text color */
+    margin-bottom: 0.75rem; /* Add spacing below the title */
+  }
+  
+  .skill-box .subtitle {
+    color: #666666; /* Slightly lighter text color */
+  }
