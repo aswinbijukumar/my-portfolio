@@ -40,3 +40,61 @@
   .skill-box .subtitle {
     color: #666666; /* Slightly lighter text color */
   }
+ /* Improved skill card with glassmorphism effect */
+.skill-card {
+  background: rgba(255, 255, 255, 0.85); /* Slight transparency */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+}
+
+/* Add hover effect for interactivity */
+.skill-card:hover {
+  transform: translateY(-8px) rotate(2deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9)); /* Subtle gradient */
+}
+
+/* Make the icons larger and more eye-catching */
+.skill-icon {
+  font-size: 3rem !important;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.2);
+}
+
+/* Improve title and subtitle visibility */
+.skill-card .title {
+  font-weight: 700;
+  color: #333; /* Darker color for better readability */
+  margin-top: 10px;
+}
+
+.skill-card .subtitle {
+  color: #444; /* Slightly lighter than title */
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle glow */
+}
+
+/* Hover effect for title and subtitle */
+.skill-card:hover .title {
+  color: #222; /* Even darker on hover */
+}
+
+.skill-card:hover .subtitle {
+  color: #111; /* Slightly bolder text */
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15); /* More pronounced glow */
+}
+
+/* Responsive padding for better alignment */
+@media (max-width: 768px) {
+  .skill-card {
+    padding: 1.5rem;
+  }
+}

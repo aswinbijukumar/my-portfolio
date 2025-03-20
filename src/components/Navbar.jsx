@@ -1,34 +1,24 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "../components/Navbar.css";
 import "bulma/css/bulma.min.css";
+import "../components/Navbar.css"; // Import custom CSS
 import logo from "../assets/logonew.png"; // Import the logo image
 
 const Navbar = () => {
-  const [isActive, setIsActive] = useState(false); // State for mobile menu
-  const location = useLocation(); // Get current route location
-
-  // Toggle mobile menu
-  const toggleMobileMenu = () => {
-    setIsActive(!isActive);
-  };
-
-  // Close mobile menu when a link is clicked
-  const closeMobileMenu = () => {
-    setIsActive(false);
-  };
+  const [isActive, setIsActive] = useState(false);
+  const location = useLocation();
 
   return (
-    <nav className="navbar has-background-white" role="navigation" aria-label="main navigation">
-      <div className="container">
-        {/* Navbar Brand */}
+    <nav className="navbar is-white py-3" role="navigation" aria-label="main navigation">
+      <div className="container is-flex is-align-items-center is-justify-content-space-between">
+        
+        {/* Navbar Brand (Logo) */}
         <div className="navbar-brand">
-          <Link to="/" onClick={closeMobileMenu} className="navbar-logo-container" style={{ marginLeft: "100px", display: "flex", alignItems: "center" }}>
-            <img
-              src={logo}
-              alt="Logo"
-              className="navbar-logo"
-              style={{ height: "100px", flexShrink: 0 }} 
+          <Link to="/" className="navbar-item" onClick={() => setIsActive(false)}>
+            <img 
+              src={logo} 
+              alt="Logo" 
+              style={{ height: "130px", width: "auto", maxHeight: "150px" }} // Adjust size here
             />
           </Link>
 
@@ -38,7 +28,7 @@ const Navbar = () => {
             className={`navbar-burger ${isActive ? "is-active" : ""}`}
             aria-label="menu"
             aria-expanded="false"
-            onClick={toggleMobileMenu}
+            onClick={() => setIsActive(!isActive)}
           >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -49,19 +39,51 @@ const Navbar = () => {
         {/* Navbar Menu */}
         <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
           <div className="navbar-end">
-            <Link
-              to="/projects"
-              className={`navbar-item button-style ${location.pathname === "/projects" ? "is-active" : ""}`}
-              onClick={closeMobileMenu}
+            <Link 
+              to="/projects" 
+              className={`navbar-item has-text-weight-bold is-size-4 p-4 ${location.pathname === "/projects" ? "has-text-primary" : ""}`}
+              style={{
+                color: location.pathname === "/projects" ? "#6E07F3" : "",
+                transition: "color 0.3s ease, transform 0.3s ease", // Smooth transition for color and transform
+              }}
+              onClick={() => setIsActive(false)}
+              onMouseEnter={(e) => {
+                e.target.style.color = "#6E07F3";  // Apply the purple color when hovered
+                e.target.style.transform = "scale(1.1)";  // Scale up the text on hover
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = "";  // Reset color when hover is removed
+                e.target.style.transform = "scale(1)";  // Reset scaling
+              }}
             >
               Projects
             </Link>
-            <Link
-              to="/contact"
-              className={`navbar-item button-style ${location.pathname === "/contact" ? "is-active" : ""}`}
-              onClick={closeMobileMenu}
+
+            <Link 
+              to="/contact" 
+              className="navbar-item p-4" 
+              onClick={() => setIsActive(false)}
             >
-              Say Hello
+              <button 
+                className="button is-rounded is-large is-uppercase has-text-weight-bold"
+                style={{
+                  backgroundColor: "#6E07F3", 
+                  color: "white",
+                  transition: "all 0.3s ease", // Smooth transition for background and transform
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#4e06b2";  // Darker color on hover
+                  e.target.style.transform = "scale(1.1)";  // Scale up the button
+                  e.target.style.boxShadow = "0 10px 20px rgba(110, 7, 243, 0.4)";  // Add a shadow effect
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "#6E07F3";  // Reset color
+                  e.target.style.transform = "scale(1)";  // Reset scaling
+                  e.target.style.boxShadow = "none";  // Remove shadow
+                }}
+              >
+                Say Hello
+              </button>
             </Link>
           </div>
         </div>

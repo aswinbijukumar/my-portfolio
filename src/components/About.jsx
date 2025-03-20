@@ -1,34 +1,19 @@
 import React from "react";
-import "./About.css";
 import "bulma/css/bulma.min.css";
 
 const About = () => {
   return (
-    <section id="about" className="section" style={{ backgroundColor: "#6E07F3" }}> {/* Blue background color */}
-      <div className="container">
-        <h1 className="title has-text-centered" style={{ color: "#ffffff" }}>About Me</h1> {/* White text color */}
-        <p className="subtitle has-text-centered" style={{ color: "#ffffff" }}>
-          Hi, I'm a web developer with a passion for creating clean, responsive, and user-friendly websites.
+    <section id="about" className="section" style={{ backgroundColor: "#6E07F3", color: "white" }}>
+      <div className="container has-text-centered">
+        <h1 className="title is-size-2 has-text-weight-bold">Hi, I’m Aswin. Nice to meet you.</h1>
+        <p className="is-size-4" style={{ maxWidth: "800px", margin: "0 auto" }}>
+          A passionate <strong>developer, designer, and problem-solver</strong>, I’m currently pursuing my 
+          Master’s degree at <strong>Amal Jyothi College of Engineering</strong>. I specialize in 
+          <strong> full-stack web development, cloud computing, DevOps, UI/UX design, and automation</strong>.  
+          From crafting sleek, interactive websites. I thrive on creating seamless digital experiences.  
+          Beyond coding, I enjoy <strong> watching movies, and playing games</strong>.  
+          Let’s build something extraordinary together! 🚀
         </p>
-
-        {/* Detailed Description */}
-        <div className="content has-text-centered">
-          <p style={{ color: "#ffffff" }}>
-            I'm a <strong>Full-stack Developer</strong> with expertise in building modern web applications using
-            technologies like <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>. I have a
-            strong passion for creating intuitive and efficient user experiences.
-          </p>
-          <p style={{ color: "#ffffff" }}>
-            Over the years, I've worked on various projects, from small business websites to large-scale web
-            applications. I enjoy solving complex problems and turning ideas into reality through code.
-          </p>
-          <p style={{ color: "#ffffff" }}>
-            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
-            enjoying a good cup of coffee.
-          </p>
-        </div>
-
-       
       </div>
     </section>
   );

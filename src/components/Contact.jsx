@@ -121,10 +121,6 @@ const Contact = () => {
                       borderRadius: "8px",
                       transition: "all 0.3s",
                     }}
-                    onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#00cccc")}
-                    onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#00ffff")}
-                    onMouseDown={(e) => (e.currentTarget.style.transform = "scale(0.95)")}
-                    onMouseUp={(e) => (e.currentTarget.style.transform = "scale(1)")}
                   >
                     Send Message
                   </button>

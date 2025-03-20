@@ -4,7 +4,7 @@ const certificationSchema = new mongoose.Schema({
     title: { type: String, required: true },
     issuingOrganization: { type: String, required: true },
     issueDate: { type: Date, required: true },
-    certificateUrl: { type: String }
+    linkedinUrl: { type: String, required: true } // ✅ This is now required
 });
 
 module.exports = mongoose.model("Certification", certificationSchema);

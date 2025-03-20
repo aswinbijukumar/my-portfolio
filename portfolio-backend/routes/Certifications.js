@@ -6,7 +6,14 @@ const router = express.Router();
 // Add a certification
 router.post("/", async (req, res) => {
     try {
-        const certification = new Certification(req.body);
+        const { title, issuingOrganization, issueDate, linkedinUrl } = req.body;
+
+        // Validate required fields
+        if (!title || !issuingOrganization || !issueDate || !linkedinUrl) {
+            return res.status(400).json({ message: "All fields, including LinkedIn URL, are required" });
+        }
+
+        const certification = new Certification({ title, issuingOrganization, issueDate, linkedinUrl });
         await certification.save();
         res.status(201).json(certification);
     } catch (error) {
