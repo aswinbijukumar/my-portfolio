@@ -10,7 +10,7 @@ const Certifications = () => {
   useEffect(() => {
     const fetchCertifications = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/certifications");
+        const response = await axios.get("https://my-portfolio-1wj8.onrender.com/certifications");
         console.log("Certifications Data:", response.data);
         setCertifications(response.data);
       } catch (error) {

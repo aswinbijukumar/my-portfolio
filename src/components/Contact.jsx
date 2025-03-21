@@ -21,7 +21,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/api/contacts", formData);
+      const response = await axios.post("https://my-portfolio-1wj8.onrender.com/api/contacts", formData);
       if (response.status === 201) {
         setStatus({ type: "success", message: "Message sent successfully!" });
         setFormData({ name: "", email: "", message: "" }); // Reset form

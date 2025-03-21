@@ -11,7 +11,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/projects");
+        const response = await axios.get("https://my-portfolio-1wj8.onrender.com/api/projects");
         console.log("Projects Data:", response.data);
         setProjects(response.data);
       } catch (error) {
