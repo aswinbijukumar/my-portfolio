@@ -15,25 +15,33 @@
   border: 4px solid #00ffff;
   object-fit: cover;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Zoomed-In Effect (Modal-like) */
+/* When hovered → Zoom in */
 .profile-photo-container:hover .profile-photo {
-  transform: scale(4); /* Enlarges the image */
+  transform: scale(3); /* Enlarged but not too much */
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.6);
   position: relative;
-  z-index: 100;
+  z-index: 10;
 }
 
 /* Background Blur Effect */
-.profile-photo-container:hover::before {
+.profile-photo-container::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  background: rgba(0, 0, 0, 0.3); /* Slight dim effect */
   backdrop-filter: blur(10px);
-  z-index: 50;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show blur effect only when hovered */
+.profile-photo-container:hover::before {
+  opacity: 1;
 }
