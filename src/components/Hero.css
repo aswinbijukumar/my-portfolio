@@ -7,81 +7,87 @@
 
 /* Profile photo container */
 .profile-photo-container {
-  margin-bottom: 2rem; /* Add spacing below the photo */
-  display: inline-block; /* Center the photo */
-  overflow: hidden; /* Prevent image from overflowing */
-  border-radius: 50%; /* Makes sure the image stays circular */
+  position: relative; /* Ensures hover effect doesn't shift elements */
+  display: inline-block;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 /* Profile photo styling */
 .profile-photo {
-  width: 150px; /* Adjust the size of the photo */
+  width: 150px;
   height: 150px;
-  border-radius: 50%; /* Make the photo circular */
-  border: 4px solid #00ffff; /* Add a turquoise border */
-  object-fit: cover; /* Ensure the photo fits within the circle */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  border-radius: 50%;
+  border: 4px solid #00ffff;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Profile photo hover effect */
-.profile-photo:hover {
-  transform: scale(1.1); /* Slightly enlarge the photo */
-  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5); /* Glowing effect */
+/* Enlarged profile photo on hover */
+.profile-photo-container:hover .profile-photo {
+  transform: scale(2.5); /* Enlarge significantly */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2.5); /* Center and scale */
+  z-index: 10;
+  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.6);
 }
 
 /* Custom styles for the hero title */
 .hero .title {
-  color: #333333; /* Dark text color */
-  font-size: 3rem; /* Larger font size */
-  font-weight: bold; /* Bold text */
-  margin-bottom: 1rem; /* Add spacing below the title */
+  color: #333333;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 /* Custom styles for the hero subtitle */
 .hero .subtitle {
-  color: #666666; /* Slightly lighter text color */
-  font-size: 1.5rem; /* Medium font size */
-  margin-bottom: 2rem; /* Add spacing below the subtitle */
+  color: #666666;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Devices container */
 .devices-container {
-  margin: 2rem 0; /* Add spacing around the devices image */
+  margin: 2rem 0;
 }
 
 /* Devices image styling */
 .devices-image {
-  width: 100%; /* Make the image responsive */
-  max-width: 800px; /* Limit the maximum width */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: -1px; /* Slightly overlap with the About section */
-  transition: opacity 0.3s ease; /* Smooth transition */
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin-bottom: -1px;
+  transition: opacity 0.3s ease;
 }
 
 /* Devices image hover effect */
 .devices-image:hover {
-  opacity: 0.9; /* Slightly fade when hovered */
+  opacity: 0.9;
 }
 
 /* Custom styles for the button */
 .hero .button.is-primary {
-  background-color: #6E07F3; /* Purple background */
-  color: #ffffff; /* White text */
-  border: none; /* Remove border */
-  transition: all 0.3s ease; /* Smooth transition */
-  font-size: 1.25rem; /* Larger font size */
-  padding: 1rem 2rem; /* Add padding */
-  border-radius: 30px; /* Rounded button edges */
+  background-color: #6E07F3;
+  color: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  border-radius: 30px;
 }
 
 /* Button hover effect */
 .hero .button.is-primary:hover {
-  background-color: #00947e; /* Darker turquoise on hover */
-  transform: scale(1.05); /* Slightly enlarge the button */
-  box-shadow: 0 4px 10px rgba(0, 148, 126, 0.4); /* Subtle shadow on hover */
+  background-color: #00947e;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 148, 126, 0.4);
 }
 
-/* Profile photo styling */
+/* Hero section padding */
 .hero {
-  padding-top: 140px; /* Adjust based on navbar height */
+  padding-top: 140px;
 }

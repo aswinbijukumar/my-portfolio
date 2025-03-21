@@ -1,13 +1,12 @@
 import React from "react";
 import "../components/Hero.css";
 import "bulma/css/bulma.min.css";
-import profilePhoto from "../assets/aswinpic.jpg"; // Import the profile photo
-import heroDevices from "../assets/herocon.jpg"; // Import the devices illustration
+import profilePhoto from "../assets/aswinpic.jpg"; // Profile photo import
+import heroDevices from "../assets/herocon.jpg"; // Devices illustration import
 
 const Hero = () => {
   return (
     <section className="hero is-fullheight" style={{ paddingTop: "20px" }}>
-      {/* Reduced padding to bring content closer to navbar */}
       <div className="hero-body">
         <div className="container has-text-centered">
           {/* Profile Photo */}
@@ -31,7 +30,6 @@ const Hero = () => {
 
       {/* Devices Illustration */}
       <div className="hero-foot">
-        {/* Use Bulma's hero-foot for bottom alignment */}
         <div className="container has-text-centered">
           <img
             src={heroDevices}
