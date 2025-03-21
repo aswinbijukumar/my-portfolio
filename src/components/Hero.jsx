@@ -1,21 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "../components/Hero.css";
 import "bulma/css/bulma.min.css";
-import profilePhoto from "../assets/aswinpic.jpg"; // Profile photo import
-import heroDevices from "../assets/herocon.jpg"; // Devices illustration import
+import profilePhoto from "../assets/aswinpic.jpg"; // Import profile photo
+import heroDevices from "../assets/herocon.jpg"; // Import devices illustration
 
 const Hero = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <section className="hero is-fullheight" style={{ paddingTop: "20px" }}>
       <div className="hero-body">
         <div className="container has-text-centered">
-          {/* Profile Photo */}
-          <div className="profile-photo-container">
+          {/* Profile Photo Container */}
+          <div
+            className="profile-photo-container"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {/* Normal Profile Photo */}
             <img
               src={profilePhoto}
               alt="Aswin Bijukumar"
               className="profile-photo"
             />
+            {/* Enlarged Profile Photo */}
+            {isHovered && (
+              <img
+                src={profilePhoto}
+                alt="Aswin Bijukumar Enlarged"
+                className="profile-photo-fullscreen"
+              />
+            )}
           </div>
 
           {/* Title and Subtitle */}
