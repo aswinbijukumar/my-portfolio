@@ -1,36 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "../components/Hero.css";
 import "bulma/css/bulma.min.css";
-import profilePhoto from "../assets/aswinpic.jpg"; // Import profile photo
-import heroDevices from "../assets/herocon.jpg"; // Import devices illustration
+import profilePhoto from "../assets/aswinpic.jpg"; // Import the profile photo
+import heroDevices from "../assets/herocon.jpg"; // Import the devices illustration
 
 const Hero = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <section className="hero is-fullheight" style={{ paddingTop: "20px" }}>
+      {/* Reduced padding to bring content closer to navbar */}
       <div className="hero-body">
         <div className="container has-text-centered">
-          {/* Profile Photo Container */}
-          <div
-            className="profile-photo-container"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            {/* Normal Profile Photo */}
+          {/* Profile Photo */}
+          <div className="profile-photo-container">
             <img
               src={profilePhoto}
               alt="Aswin Bijukumar"
               className="profile-photo"
             />
-            {/* Enlarged Profile Photo */}
-            {isHovered && (
-              <img
-                src={profilePhoto}
-                alt="Aswin Bijukumar Enlarged"
-                className="profile-photo-fullscreen"
-              />
-            )}
           </div>
 
           {/* Title and Subtitle */}
@@ -45,6 +31,7 @@ const Hero = () => {
 
       {/* Devices Illustration */}
       <div className="hero-foot">
+        {/* Use Bulma's hero-foot for bottom alignment */}
         <div className="container has-text-centered">
           <img
             src={heroDevices}
