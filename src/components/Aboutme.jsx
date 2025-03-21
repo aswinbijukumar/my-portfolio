@@ -9,7 +9,7 @@ import {
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import "bulma/css/bulma.min.css";
-import "./AboutMe.css"; // Custom styles for interactivity
+import "./Aboutme.css"; // Custom styles for interactivity
 
 const skills = [
   { icon: faPalette, title: "Designer", color: "#e63946", desc: "Creating visually stunning and user-friendly designs." },
