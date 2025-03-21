@@ -1,4 +1,4 @@
-
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -8,7 +8,7 @@ const cors = require("cors");
 const certificationRoutes = require("./routes/Certifications"); // Corrected casing
 const projectRoutes = require("./routes/Projects"); // Corrected casing
 const contactRoutes = require("./routes/Contacts"); // Corrected casing
-
+const mongoURI = process.env.MONGODB_URI;
 const app = express();
 const PORT = 3000;
 
@@ -16,10 +16,10 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB Atlas
-mongoose.connect("mongodb+srv://aswinbijukumar:aswinrdjmessi5@portfolio.chdg9.mongodb.net/?retryWrites=true&w=majority&appName=portfolio", {
+mongoose.connect(mongoURI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => console.log("✅ Connected to MongoDB"))
+    useUnifiedTopology: true,
+  }).then(() => console.log("✅ Connected to MongoDB"))
   .catch(err => console.error("❌ Database connection error:", err));
 
 // Routes
