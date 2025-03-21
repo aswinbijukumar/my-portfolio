@@ -14,9 +14,9 @@ const PORT = process.env.PORT || 3000; // Use environment variable for port
 
 // Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:3000", // Allow only your frontend URL
-  credentials: true, // Allow cookies and credentials
-}));
+    origin: process.env.FRONTEND_URL || "https://aswinbijukumar.vercel.app", // Allow your hosted frontend
+    credentials: true, // Allow cookies and authentication headers
+  }));
 app.use(express.json()); // Parse JSON request bodies
 
 // MongoDB connection URI
