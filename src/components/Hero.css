@@ -5,7 +5,6 @@
   margin-bottom: 2rem;
   border-radius: 50%;
   overflow: hidden;
-  z-index: 10;
 }
 
 /* Normal Profile Photo */
@@ -19,15 +18,22 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Enlarged Profile Photo Effect */
+/* Zoomed-In Effect (Modal-like) */
 .profile-photo-container:hover .profile-photo {
-  transform: scale(4); /* Zooms the profile picture */
-  z-index: 20;
+  transform: scale(4); /* Enlarges the image */
   position: relative;
+  z-index: 100;
 }
 
-/* Background Blur Effect When Hovering */
-.profile-photo-container:hover ~ .hero-body {
-  filter: blur(8px); /* Blurs everything except the profile pic */
-  transition: filter 0.3s ease-in-out;
+/* Background Blur Effect */
+.profile-photo-container:hover::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(10px);
+  z-index: 50;
 }
