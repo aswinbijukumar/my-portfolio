@@ -30,7 +30,7 @@ const Projects = () => {
       <div className="container">
         <h1 className="title has-text-centered has-text-white">Projects</h1>
         <p className="subtitle has-text-centered has-text-white">
-  Here are some of the projects I've worked on. You can reach me at <a href="mailto:aswinblm10@gmail.com" className="has-text-white has-text-weight-bold is-underlined">aswinblm10@gmail.com</a>.
+  Here are some of the projects I've worked on. You can reach me at <a href="mailto:aswinblm10@gmail.com" className="has-text-white has-text-weight-bold is-underlined">email</a>.
 </p>
 
         {loading && <p className="has-text-centered has-text-white">Loading projects...</p>}
